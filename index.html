@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/Calendar.png">
+    <title>当前时间</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+    <div class="clock-area">
+        <div class="fill">
+            <div class="reference"></div>
+            <div class="clock" id="utility-clock">
+                <div class="centre">
+                    <div class="dynamic"></div>
+                    <div class="expand round circle-1"></div>
+                    <div class="anchor hour">
+                        <div class="element thin-hand"></div>
+                        <div class="element fat-hand"></div>
+                    </div>
+                    <div class="anchor minute">
+                        <div class="element thin-hand"></div>
+                        <div class="element fat-hand minute-hand"></div>
+                    </div>
+                    <div class="anchor second">
+                        <div class="element second-hand"></div>
+                    </div>
+                    <div class="expand round circle-2"></div>
+                    <div class="expand round circle-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="data-area">
+        <h3 id="solar-date"></h3>
+        <h3 id="lunar-date"></h3>
+        <h3 id="ganzhi-date"></h3>
+        <h3 id="shichen-info"></h3>
+        <h3>
+            <span id="xingci-info"></span>(星次)
+            <span id="xingzuo-info"></span>(星座)
+        </h3>
+        <h3 id="jieqi-info"></h3>
+    </div>
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>
