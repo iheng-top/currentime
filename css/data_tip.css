@@ -1,0 +1,65 @@
+/**
+使用data-tip自定义属性来实现title的效果
+代码来自：https://blog.csdn.net/qq_41499782/article/details/106827037
+作者：twinkle||cll（ 2020-06-18 11:45:04 发布）
+
+使用方法： 使用data-tip=“xxxxxx”，也就是自定义属性来实现样式。 注意： 如果父级或者本身存在overflow:
+hidden的情况下，该样式是不会生效的。原因如下： 因为overflower:hidden,会异常所有超出的部分。
+而伪元素其实本身也是会当做元素来使用，所有伪元素在元素前面或者后面使用任何内容都会隐藏
+*/
+
+[data-tip] {
+    position: relative;
+    display: inline-block;
+}
+
+[data-tip]::before,
+[data-tip]::after {
+    position: absolute;
+    visibility: visible;
+    opacity: 0;
+    z-index: 20200618;
+    pointer-events: none;
+    transition: .2s;
+}
+
+[data-tip]::before {
+    content: '';
+    border: 5px solid transparent;
+    border-top-color: rgba(0, 0, 0, .6);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 100%;
+    left: 50%;
+    margin-bottom: -5px;
+}
+
+[data-tip]::after {
+    content: attr(data-tip);
+    background: rgba(0, 0, 0, .7);
+    font: 12px Microsoft YaHei;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 2px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, .3);
+    bottom: 100%;
+    width: 100%;
+    white-space: pre-wrap;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5px;
+}
+
+[data-tip]:hover::before,
+[data-tip]:hover::after {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition-delay: .15s;
+    transition-delay: .15s;
+}
+
+
+[data-tip=""]::before,
+[data-tip=""]::after {
+    display: none !important;
+}

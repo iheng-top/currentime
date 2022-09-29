@@ -60,7 +60,7 @@ export class GanZhiDate {
 
 		// 时天干与月天干类似，与日天干有循环对应关系
 		const shi_tiangan = (((R % 10) % 5) * 2 + (Math.floor((hour + 1) / 2))) % 10
-		const shi_dizhi = Math.floor((hour + 1) / 2)
+		const shi_dizhi = (Math.floor((hour + 1) / 2)) % 12
 
 		// 计算多少刻：正点过后加4刻
 		const keshu = (hour % 2 != 0) ? Math.floor(min / 15) + 1 : Math.floor(min / 15) + 1 + 4

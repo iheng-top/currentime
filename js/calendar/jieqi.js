@@ -65,7 +65,7 @@ export class JieQiInfo {
 			return `今天是[${this.thisJieQi}], 距离下个节气[${this.nextJieQi}(${this.nextJieQiDate.month}月${this.nextJieQiDate.day}日)]还有${this.stillDays}天`
 		}
 		else {
-			return `距离上个节气[${this.thisJieQi}]已经过去${this.continueDays}天，距离下个节气[${this.nextJieQi}(${this.nextJieQiDate.month}月${this.nextJieQiDate.day}日)]还有${this.stillDays}天`
+			return `距离上个节气[${this.thisJieQi}]已经过去${this.continueDays}天<br>距离下个节气[${this.nextJieQi}(${this.nextJieQiDate.month}月${this.nextJieQiDate.day}日)]还有${this.stillDays}天`
 		}
 	}
 }

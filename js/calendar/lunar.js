@@ -126,7 +126,7 @@ export class LunarDate {
 		if (this.isLeap) {
 			han_month = '闰' + han_month
 		}
-		return `公元${han_year}年(开元${han_xy_year}年) ${han_month} ${HAN_RIQI[this.lunarDay - 1]}`
+		return `${han_year}年(开元${han_xy_year}年) ${han_month} ${HAN_RIQI[this.lunarDay - 1]}`
 	}
 }
 

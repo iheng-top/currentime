@@ -7,8 +7,10 @@
     <link rel="shortcut icon" href="images/Calendar.png">
     <title>当前时间</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/data_tip.css">
 </head>
 <body>
+    <div class="bg-blur"></div>
     <div class="clock-area">
         <div class="fill">
             <div class="reference"></div>
@@ -34,15 +36,15 @@
         </div>
     </div>
     <div class="data-area">
-        <h3 id="solar-date"></h3>
-        <h3 id="lunar-date"></h3>
-        <h3 id="ganzhi-date"></h3>
-        <h3 id="shichen-info"></h3>
+        <h3><span id="solar-date" data-tip="公历"></span></h3>
+        <h3><span id="lunar-date" data-tip="农历"></span></h3>
+        <h3><span id="ganzhi-date" data-tip="干支"></span></h3>
+        <h3><span id="shichen-info" data-tip="时辰"></span></h3>
         <h3>
-            <span id="xingci-info"></span>(星次)
-            <span id="xingzuo-info"></span>(星座)
+            <span id="xingci-info" data-tip="星次"></span>
+            <span id="xingzuo-info" data-tip="星座"></span>
         </h3>
-        <h3 id="jieqi-info"></h3>
+        <h3><span id="jieqi-info" data-tip="节气"></span></h3>
     </div>
     <script type="module" src="js/index.js"></script>
 </body>

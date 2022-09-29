@@ -37,10 +37,10 @@ function flush() {
         ganZhiDate = new GanZhiDate(solarDate)
         shiChenNode.innerHTML = `${ganZhiDate.shichen}(${ganZhiDate.shichenAlias}${ganZhiDate.gengshu != '' ? ' · ' + ganZhiDate.gengshu : ''}) ${ganZhiDate.keshu}` 
         // 每小时
-        if (solarDate.hour == 0) {
+        if (solarDate.min == 0) {
             ganZhiDateNode.innerHTML = ganZhiDate.toString()
             // 每天
-            if (solarDate.min == 0 && solarDate.sec == 0) {
+            if (solarDate.hour == 0 && solarDate.sec == 0) {
                 lunarDate = new LunarDate(solarDate)
                 jieQiInfo = new JieQiInfo(solarDate)
         
